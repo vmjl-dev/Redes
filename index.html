@@ -1,1 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red, Servidor y Cliente</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css">
+<link rel="stylesheet" href="./css/styles.css">
+</head>
 
+<body>
+<!-- Barra de Navegaciin -->
+    <nav class="navigation">
+        <div class="container">
+            <a href="#ip">IPv4/IPv6</a>
+            <a href="#servidores">Servidores</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#clientes">Clientes</a>
+<a href="#conclusion">Conclusion</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="text-center">Protocolo de Red, Servidor y Cliente</h1>
+
+        <!-- Sección IPv4 e IPv6 -->
+        <section id="ip" class="section-card">
+            <h2>IPv4 vs IPv6</h2>
+            
+            <div class="row">
+                <div class="column">
+<div class="column-card">
+                    <h3>IPv4</h3>
+                  <ul>
+          <li>Es la cuarta versión del Protocolo de Internet, lanzada en 1981, y sigue siendo el protocolo más usado para la identificación y comunicación de dispositivos en redes.</li>
+          <li>Usa direcciones de 32 bits, permitiendo alrededor de 4.294 millones de direcciones únicas.</li>
+          <li>Formato: cuatro octetos decimales separados por puntos. Ejemplo:
+<div class="code-example">
+192.168.1.1
+</div>
+</li>
+          <li>Es un protocolo sin conexión, basado en el modelo de entrega “best-effort” (no garantiza la entrega).</li>
+          <li>amiento de direcciones, falta de soporte nativo para IPsec, encabezados limitados y costos crecientes por dirección.</li>
+        </ul>
+</div>
+                </div>
+                
+                <div class="column">
+<div class="column-card">
+                    <h3>IPv6</h3>
+                    <ul>
+          <li>Es la evolución de IPv4, diseñado para resolver el agotamiento de direcciones y mejorar la eficiencia de la red.</li>
+          <li>Usa direcciones de 128 bits, permitiendo un número prácticamente ilimitado de direcciones.</li>
+          <li>Formato: hexadecimal, separado por dos puntos. Ejemplo:
+<div class="code-example">
+2001:0db8:85a3:0000:0000:8a2e:0370:7334
+</div>
+</li>
+          <li>Características: configuración automática simplificada, soporte nativo para IPsec, calidad de servicio (QoS) integrada, eliminación de NAT y mejor manejo de multidifusión.</li>
+          <li>Tipos de transmisión: unicast, anycast y multicast.</li>
+        </ul>
+</div>
+                </div>
+            </div>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Protocolo</th>
+                        <th>Longitud</th>
+                        <th>Formato</th>
+                        <th>Seguridad</th>
+                        <th>QoS</th>
+                        <th>NAT</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>IPv4</td>
+                        <td>32 bits</td>
+                        <td>Decimal</td>
+                        <td>Opcional</td>
+                        <td>No</td>
+                        <td>Sí</td>
+                    </tr>
+                    <tr>
+                        <td>IPv6</td>
+                        <td>128 bits</td>
+                        <td>Hexadecimal</td>
+                        <td>Integrada</td>
+                        <td>Sí</td>
+                        <td>No</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Sección de Servidores -->
+        <section id="servers" class="section-card">
+            <h2>Servidores</h2>
+            <div class="row">
+                <div class="column">
+                    <div class="column-card">
+                        <h3>Windows Server</h3>
+                         <ul>
+                  <li>Sistema operativo de Microsoft para gestionar redes, datos y aplicaciones empresariales.</li>
+                  <li>Funcionalidades: controlador de dominio, servidor de archivos, DNS, DHCP, virtualización, administración centralizada y seguridad avanzada.</li>
+                  <li>Plataforma principal para Active Directory y servicios de red en entornos empresariales.</li>
+                </ul>
+                    </div>
+                </div>
+                
+                <div class="column">
+                    <div class="column-card">
+                        <h3>Linux Server</h3>
+                        <ul>
+                  <li>Sistema operativo de código abierto, muy usado para servidores web, bases de datos, correo y aplicaciones empresariales.</li>
+                  <li>Ventajas: estabilidad, seguridad, personalización, bajo costo y gran variedad de aplicaciones.</li>
+                  <li>Usos: hosting web, colaboración, gestión de proyectos, VoIP, streaming, redes sociales privadas, entre otros.</li>
+                </ul>
+                    </div>
+                </div>
+                
+                <div class="column">
+                    <div class="column-card">
+                        <h3>macOS Server</h3>
+                          <ul>
+                  <li>Menos común en entornos empresariales, pero útil para servicios de archivos, colaboración y pequeñas redes.</li>
+                  <li>Integración con hardware Apple y facilidad de uso.</li>
+                </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Servicios -->
+        <section id="services" class="section-card">
+            <h2>Servicios de Red</h2>
+            
+            <div class="row">
+                <div class="column">
+<div class="column-card">
+                    <h3>Active Directory</h3>
+                    <ul>
+          <li>Servicio de directorio de Microsoft para gestionar usuarios, permisos y recursos de red.</li>
+          <li>Organiza objetos (usuarios, grupos, dispositivos) en una estructura jerárquica y lógica.</li>
+          <li>Requiere un controlador de dominio (servidor Windows con AD DS instalado).</li>
+          <li>Permite autenticación centralizada, políticas de seguridad y replicación de datos entre controladores de dominio.</li>
+        </ul>
+</div> 
+                </div>
+                
+                <div class="column">
+<div class="column-card">
+                    <h3>DNS</h3>
+                    <ul>
+          <li>Sistema que traduce nombres de dominio a direcciones IP (A para IPv4, AAAA para IPv6).</li>
+          <li>Esencial para la navegación y localización de servicios en la red.</li>
+        </ul>
+                </div>
+                </div>
+                <div class="column">
+<div class="column-card">
+                    <h3>DHCP</h3>
+                    <ul>
+          <li>Protocolo que asigna automáticamente direcciones IP, máscara de subred, puerta de enlace y DNS a los dispositivos de la red.</li>
+          <li>Simplifica la administración, evitando la configuración manual en cada cliente.</li>
+        </ul>
+                </div>
+</div>
+            </div>
+        </section>
+
+        <!-- Sección de Clientes -->
+        <section id="clients" class="section-card">
+            <h2>Configuración de Clientes:</h2>
+            
+            <div class="row">
+                <div class="column">
+<div class="column-card">
+                    <h3>Parámetros clave:</h3>
+                    <ul>
+            <li><strong>IP:</strong> Dirección única (IPv4 o IPv6) asignada al dispositivo para identificarlo en la red.</li>
+            <li><strong>Submáscara:</strong> Define qué parte de la IP corresponde a la red y cuál al host; ejemplo típico en IPv4: 255.255.255.0.</li>
+            <li><strong>Puerto:</strong> Número lógico que identifica servicios o aplicaciones en un dispositivo (ejemplo: 80 para HTTP, 443 para HTTPS).</li>
+            <li><strong>Protocolo:</strong> Define cómo se comunican cliente y servidor; los más comunes son TCP y UDP, sobre IPv4 o IPv6.</li>
+            <li><strong>MAC:</strong> Dirección física única de la tarjeta de red, usada para la comunicación en la capa de enlace de datos.</li>
+            <li><strong>DNS1 y DNS2:</strong> Direcciones de los servidores DNS primario y secundario que usa el cliente para resolver nombres de dominio.</li>
+          </ul>
+</div>
+                </div>
+                
+                <div class="column">
+<div class="column-card">
+                    <h3>Ejemplo configuración:</h3>
+                    <div class="code-example">
+                     <ul>
+            <li><strong>IP:</strong> 192.168.1.10 (IPv4) o 2001:db8::10 (IPv6)</li>
+            <li><strong>Submáscara:</strong> 255.255.255.0 (IPv4) o /64 (IPv6)</li>
+            <li><strong>Puerto:</strong> 80 (HTTP), 443 (HTTPS), etc.</li>
+            <li><strong>Protocolo:</strong> TCP/IP</li>
+            <li><strong>MAC:</strong> 00:1A:2B:3C:4D:5E</li>
+            <li><strong>DNS1:</strong> 8.8.8.8</li>
+            <li><strong>DNS2:</strong> 8.8.4.4</li>
+          </ul>
+</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+<section id="conclusion" class="section-card">
+<div class="row">
+<div class="column">
+<h3>Conclusiones:</h3>
+          <ul>
+<div class="column-card">
+            <li>IPv4 y IPv6 son los protocolos principales para el direccionamiento y comunicación en redes, siendo IPv6 la evolución que soluciona las limitaciones de IPv4.</li>
+</div>
+<div class="column-card">
+            <li>Windows, Linux y Mac pueden funcionar como servidores, cada uno con ventajas específicas según el entorno.</li>
+</div>
+<div class="column-card">
+            <li>Active Directory centraliza la gestión de usuarios y recursos en redes Windows, mientras que DNS y DHCP son servicios fundamentales para la asignación y resolución de direcciones.</li>
+</div>
+<div class="column-card">
+            <li>Los clientes requieren parámetros como IP, submáscara, puerto, protocolo, MAC y DNS para conectarse y operar correctamente en la red.</li>
+</div>
+          </ul>
+</div>
+</div>
+</section>
+
+    <footer>
+        <div class="container text-center">
+            <p>© 2025 UNEFA - Redes. Victor Jerez</p>
+        </div>
+    </footer>
+</body>
+</html>
